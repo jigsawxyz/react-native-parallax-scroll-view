@@ -291,18 +291,7 @@ class ParallaxScrollView extends Component {
                     extrapolate: 'clamp'
                   })
                 }}>
-                  <Animated.View
-                    style={{
-                    transform: [{
-                      translateY: interpolate(scrollY, {
-                        inputRange: [0, p],
-                        outputRange: [stickyHeaderHeight, 0],
-                        extrapolate: 'clamp'
-                      })
-                    }]
-                  }}>
-                    { renderStickyHeader() }
-                  </Animated.View>
+                { renderStickyHeader() }
                 </Animated.View>
               )
               : null
